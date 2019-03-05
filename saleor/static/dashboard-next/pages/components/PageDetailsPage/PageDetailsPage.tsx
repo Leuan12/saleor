@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import AppHeader from "../../../components/AppHeader";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import { Container } from "../../../components/Container";
 import Form, { FormProps } from "../../../components/Form";
@@ -7,6 +8,7 @@ import Grid from "../../../components/Grid";
 import PageHeader from "../../../components/PageHeader";
 import SaveButtonBar from "../../../components/SaveButtonBar";
 import Toggle from "../../../components/Toggle";
+import i18n from "../../../i18n";
 import PageContent from "../PageContent";
 import PageDeleteDialog from "../PageDeleteDialog";
 import PageProperties from "../PageProperties";
@@ -66,7 +68,8 @@ const PageDetailsPage: React.StatelessComponent<PageDetailsPageProps> = ({
         {(opened, { toggle: togglePageDeleteDialog }) => (
           <Container width="md">
             <>
-              <PageHeader onBack={onBack} title={title} />
+              <AppHeader onBack={onBack}>{i18n.t("Pages")}</AppHeader>
+              <PageHeader title={title} />
               <Grid>
                 <div>
                   <PageContent

@@ -9,6 +9,7 @@ import i18n from "../../../i18n";
 import { UserError } from "../../../types";
 import CategoryDetailsForm from "../../components/CategoryDetailsForm";
 
+import AppHeader from "../../../components/AppHeader";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton/ConfirmButton";
 import SaveButtonBar from "../../../components/SaveButtonBar/SaveButtonBar";
 
@@ -51,7 +52,8 @@ export const CategoryCreatePage: React.StatelessComponent<
   >
     {({ data, change, errors, submit, hasChanged }) => (
       <Container width="md">
-        <PageHeader title={i18n.t("Add Category")} onBack={onBack} />
+        <AppHeader onBack={onBack}>{i18n.t("Categories")}</AppHeader>
+        <PageHeader title={i18n.t("Add Category")} />
         <div>
           <CategoryDetailsForm
             disabled={disabled}

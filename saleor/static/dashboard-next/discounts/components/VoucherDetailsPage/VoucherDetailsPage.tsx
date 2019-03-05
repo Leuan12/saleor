@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import AppHeader from "../../../components/AppHeader";
 import CardSpacer from "../../../components/CardSpacer";
 import { ConfirmButtonTransitionState } from "../../../components/ConfirmButton";
 import Container from "../../../components/Container";
@@ -125,7 +126,8 @@ const VoucherDetailsPage: React.StatelessComponent<VoucherDetailsPageProps> = ({
     <Form errors={errors} initial={initialForm} onSubmit={onSubmit}>
       {({ change, data, errors: formErrors, hasChanged, submit }) => (
         <Container width="md">
-          <PageHeader title={maybe(() => voucher.name)} onBack={onBack} />
+          <AppHeader onBack={onBack}>{i18n.t("Vouchers")}</AppHeader>
+          <PageHeader title={maybe(() => voucher.name)} />
           <Grid>
             <div>
               <VoucherInfo
