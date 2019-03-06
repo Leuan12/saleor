@@ -66,7 +66,7 @@ const PageDetailsPage: React.StatelessComponent<PageDetailsPageProps> = ({
     {({ change, data, errors, hasChanged, submit }) => (
       <Toggle>
         {(opened, { toggle: togglePageDeleteDialog }) => (
-          <Container >
+          <Container>
             <>
               <AppHeader onBack={onBack}>{i18n.t("Pages")}</AppHeader>
               <PageHeader title={title} />

@@ -26,7 +26,7 @@ const PageListPage: React.StatelessComponent<PageListPageProps> = ({
   onPreviousPage,
   onRowClick
 }) => (
-  <Container >
+  <Container>
     <PageHeader
       title={i18n.t("Pages", {
         context: "title"
